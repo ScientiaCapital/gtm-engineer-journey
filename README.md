@@ -27,10 +27,11 @@ This repository documents my learning journey from executive to engineer - build
 
 ## 🔥 Production Tools
 
-### 🎙️ Voice Agent for SDR Work (Building Now)
-**Status:** 🔬 EXPLORING - Building with cutting-edge AI
+### 🎙️ [Voice Agent for SDR Work](https://github.com/ScientiaCapital/sales-agent) (Building Now)
+**Status:** 🔬 BUILDING NOW - Dedicated repository with active development
 **Tech Stack:** Cartesia (ultra-realistic voice), Cerebras (ultra-fast inference), FastAPI, WebSockets, Claude
 **Goal:** 10x SDR productivity with < 100ms latency
+**Repository:** [github.com/ScientiaCapital/sales-agent](https://github.com/ScientiaCapital/sales-agent)
 **Why I'm Building It:** "Making 50+ calls daily taught me exactly what AI should automate. Building the 10x agent I wish existed."
 
 **What I'm Learning:**

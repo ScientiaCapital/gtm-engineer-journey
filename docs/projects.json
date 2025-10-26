@@ -19,7 +19,8 @@
         }
       ],
       "techStack": ["Cartesia", "Cerebras", "FastAPI", "WebSockets", "Anthropic Claude"],
-      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+      "demoLink": "",
+      "githubLink": "https://github.com/ScientiaCapital/sales-agent"
     },
     {
       "id": "dealer-scraper-mvp",
