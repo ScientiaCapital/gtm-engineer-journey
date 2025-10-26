@@ -1,0 +1,54 @@
+# Gitleaks configuration
+# Detects secrets before they're committed to git
+
+[extend]
+# Use default Gitleaks rules
+useDefault = true
+
+[[rules]]
+id = "google-api-key"
+description = "Google API Key"
+regex = '''AIza[0-9A-Za-z_-]{35}'''
+tags = ["key", "Google", "API"]
+
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API Key"
+regex = '''sk-[a-zA-Z0-9]{20,}'''
+tags = ["key", "OpenAI", "API"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["key", "AWS"]
+
+[[rules]]
+id = "github-token"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[a-zA-Z0-9]{36,}'''
+tags = ["key", "GitHub", "token"]
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*['"]([a-zA-Z0-9+/]{20,})['"]'''
+tags = ["key", "generic"]
+
+[allowlist]
+description = "Allow certain patterns that are safe"
+paths = [
+  '''^\.env\.example$''',  # Example files are safe
+  '''^\.gitleaks\.toml$''', # This config file is safe
+  '''API_KEYS_GUIDE\.md$''',  # Documentation is safe
+]
+
+# Allow placeholder values
+regexes = [
+  '''your_key_here''',
+  '''xxx''',
+  '''placeholder''',
+  '''test_key''',
+  '''fake_key''',
+  '''example_key''',
+]

@@ -45,3 +45,33 @@ node_modules/
 *.tmp
 temp/
 cache/
+
+# Browser automation profiles (CRITICAL SECURITY)
+# These can contain cached API keys, cookies, and session tokens
+**/patchright-chrome-profile/
+**/chrome-profile/
+**/firefox-profile/
+**/playwright-state/
+**/.chrome/
+**/.firefox/
+**/.webkit/
+**/User Data/
+
+# Browser cache directories (can contain secrets in cached JavaScript)
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/Service Worker/
+**/Session Storage/
+**/Local Storage/
+**/IndexedDB/
+**/cookies/
+**/Cookies/
+**/History
+**/Web Data
+
+# Screenshot and test artifacts (may contain sensitive data)
+**/screenshots/
+**/test_output/
+**/output/*.png
+**/output/*.jpg
