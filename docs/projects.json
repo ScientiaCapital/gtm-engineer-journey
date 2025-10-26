@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "dealer-scraper-mvp",
+      "name": "Dealer Scraper MVP",
+      "emoji": "🚀",
+      "status": "live",
+      "statusLabel": "✅ LIVE & PROCESSING",
+      "description": "When I was selling solar, I needed this tool. So I built it.",
+      "whatILearned": "Python, BeautifulSoup, Pandas, data cleaning at scale",
+      "metrics": [
+        {
+          "value": "1,247",
+          "label": "dealers scraped"
+        },
+        {
+          "value": "99.2%",
+          "label": "success rate"
+        }
+      ],
+      "techStack": ["Python", "BeautifulSoup", "Pandas", "Docker"],
+      "demoLink": "dealer-scraper-demo.html",
+      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey/tree/main/projects/dealer-scraper-mvp"
+    },
+    {
+      "id": "gtm-learning-journey",
+      "name": "GTM Learning Journey",
+      "emoji": "🏗️",
+      "status": "in-progress",
+      "statusLabel": "🔄 90 DAYS IN",
+      "description": "Understanding the full stack makes me better at selling these tools",
+      "whatILearned": "Docker, FastAPI, PostgreSQL, React, Next.js",
+      "metrics": [
+        {
+          "value": "Foundation Month",
+          "label": ""
+        },
+        {
+          "value": "80%",
+          "label": "Complete"
+        }
+      ],
+      "progress": 80,
+      "techStack": ["Docker", "FastAPI", "PostgreSQL", "React", "Next.js"],
+      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+    },
+    {
+      "id": "ai-infrastructure",
+      "name": "AI Infrastructure",
+      "emoji": "🤖",
+      "status": "exploring",
+      "statusLabel": "🧪 EXPLORING",
+      "description": "Build GTM tools powered by AI that I'd actually want to use",
+      "whatILearned": "MCP Servers, Claude Skills, LangChain agents",
+      "metrics": [
+        {
+          "value": "MCP Servers",
+          "label": ""
+        },
+        {
+          "value": "Agent Systems",
+          "label": ""
+        }
+      ],
+      "techStack": ["Anthropic Claude", "MCP", "HuggingFace", "LLM Fine-Tuning"],
+      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+    }
+  ]
+}

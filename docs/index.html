@@ -543,19 +543,19 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2019</div>
+                    <div class="timeline-year">2021</div>
                     <div class="timeline-content">
                         <strong>The Spark</strong> - Berkeley Fintech Python Bootcamp
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2020-2024</div>
+                    <div class="timeline-year">2021-2025</div>
                     <div class="timeline-content">
                         <strong>Deep Dive</strong> - Following ML, AI, Crypto, Blockchain, LLMs
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
+                    <div class="timeline-year">2025</div>
                     <div class="timeline-content">
                         <strong>Started Building</strong> - Docker → FastAPI → Production Tools
                     </div>
@@ -588,53 +588,8 @@
         <div class="container">
             <h2 class="accent-blue">Learning By Doing: Production Tools & Experiments</h2>
 
-            <div class="project-grid fade-in">
-                <div class="project-card">
-                    <span class="status-badge status-live">✅ LIVE & PROCESSING</span>
-                    <h3>🚀 Dealer Scraper MVP</h3>
-                    <div class="project-metric">1,247 dealers<br><span style="font-size: 1.5rem;">99.2% success rate</span></div>
-                    <p><strong>What I Learned:</strong> Python, BeautifulSoup, Pandas, data cleaning at scale</p>
-                    <p style="margin-top: 1rem;"><em>"When I was selling solar, I needed this tool. So I built it."</em></p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">BeautifulSoup</span>
-                        <span class="tech-badge">Pandas</span>
-                        <span class="tech-badge">Docker</span>
-                    </div>
-                    <a href="dealer-scraper-demo.html" style="color: var(--electric-blue); text-decoration: none; margin-top: 1rem; display: inline-block;">View Demo →</a>
-                </div>
-
-                <div class="project-card">
-                    <span class="status-badge status-progress">🔄 90 DAYS IN</span>
-                    <h3>🏗️ GTM Learning Journey</h3>
-                    <div class="project-metric">Foundation Month<br><span style="font-size: 1.5rem;">80% Complete</span></div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                    <p><strong>What I'm Learning:</strong> Docker, FastAPI, PostgreSQL, React, Next.js</p>
-                    <p style="margin-top: 1rem;"><em>"Understanding the full stack makes me better at selling these tools"</em></p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">Next.js</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="status-badge status-progress">🧪 EXPLORING</span>
-                    <h3>🤖 AI Infrastructure</h3>
-                    <div class="project-metric">MCP Servers<br><span style="font-size: 1.5rem;">Agent Systems</span></div>
-                    <p><strong>Current Focus:</strong> MCP Servers, Claude Skills, LangChain agents</p>
-                    <p style="margin-top: 1rem;"><em>"Build GTM tools powered by AI that I'd actually want to use"</em></p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Anthropic Claude</span>
-                        <span class="tech-badge">MCP</span>
-                        <span class="tech-badge">HuggingFace</span>
-                        <span class="tech-badge">LLM Fine-Tuning</span>
-                    </div>
-                </div>
+            <div id="projectsContainer" class="project-grid fade-in">
+                <!-- Projects will be loaded dynamically from projects.json -->
             </div>
 
             <div class="callout fade-in">
@@ -719,7 +674,7 @@
             </div>
 
             <div class="callout fade-in">
-                <strong>The Approach:</strong> Berkeley Fintech Bootcamp taught me Python fundamentals. The last 5 years taught me to follow emerging tech (ML, AI, Crypto, Blockchain). The last 90 days taught me to ship production code.
+                <strong>The Approach:</strong> Berkeley Fintech Bootcamp (2021) taught me Python fundamentals. The last 4 years taught me to follow emerging tech (ML, AI, Crypto, Blockchain). The last 90 days taught me to ship production code.
             </div>
         </div>
     </section>
@@ -855,7 +810,7 @@
                 <div class="timeline-item">
                     <div class="timeline-year">Stage 4</div>
                     <div class="timeline-content">
-                        <strong>Learning to Code (2024)</strong><br>
+                        <strong>Learning to Code (2025)</strong><br>
                         Bootcamp → Self-study → Production tools<br>
                         <em class="accent-blue">Key Learning: The gap between theory and shipping.</em>
                     </div>
@@ -982,7 +937,7 @@
             </div>
 
             <div class="copyright">
-                <p>&copy; 2024 Timothy Kipper Jr. | Building in Public | GTM Engineer Journey</p>
+                <p>&copy; 2025 Timothy Kipper Jr. | Building in Public | GTM Engineer Journey</p>
             </div>
         </div>
     </footer>
@@ -1010,7 +965,70 @@
 
             animateCounter(dayCounter, 90);
             animateCounter(footerDayCounter, 90);
+
+            // Load projects dynamically
+            loadProjects();
         });
+
+        // Load projects from JSON
+        async function loadProjects() {
+            try {
+                const response = await fetch('projects.json');
+                const data = await response.json();
+                const container = document.getElementById('projectsContainer');
+
+                container.innerHTML = data.projects.map(project => {
+                    const statusClass = project.status === 'live' ? 'status-live' : 'status-progress';
+
+                    let metricsHTML = '';
+                    if (project.metrics && project.metrics.length > 0) {
+                        const metricText = project.metrics.map(m =>
+                            m.label ? `${m.value} ${m.label}` : m.value
+                        ).join('<br>');
+                        metricsHTML = `<div class="project-metric">${metricText}</div>`;
+                    }
+
+                    let progressHTML = '';
+                    if (project.progress) {
+                        progressHTML = `
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${project.progress}%"></div>
+                            </div>
+                        `;
+                    }
+
+                    let demoLinkHTML = '';
+                    if (project.demoLink) {
+                        demoLinkHTML = `<a href="${project.demoLink}" style="color: var(--electric-blue); text-decoration: none; margin-top: 1rem; display: inline-block;">View Demo →</a>`;
+                    }
+
+                    const techStackHTML = project.techStack.map(tech =>
+                        `<span class="tech-badge">${tech}</span>`
+                    ).join('');
+
+                    return `
+                        <div class="project-card">
+                            <span class="status-badge ${statusClass}">${project.statusLabel}</span>
+                            <h3>${project.emoji} ${project.name}</h3>
+                            ${metricsHTML}
+                            ${progressHTML}
+                            <p><strong>What I Learned:</strong> ${project.whatILearned}</p>
+                            <p style="margin-top: 1rem;"><em>"${project.description}"</em></p>
+                            <div class="tech-stack">
+                                ${techStackHTML}
+                            </div>
+                            ${demoLinkHTML}
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                // Fallback in case JSON doesn't load
+                document.getElementById('projectsContainer').innerHTML = `
+                    <p style="color: var(--gold);">Projects loading... If this persists, please refresh the page.</p>
+                `;
+            }
+        }
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
