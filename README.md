@@ -20,11 +20,27 @@ This repository documents my learning journey from executive to engineer - build
 - 📅 **Day 90** of learning to build
 - 💼 **Sr. BDR @ Coperniq** (still crushing quota)
 - 🏗️ **Building nights & weekends**
-- 📊 **3 production tools** shipped
+- 📊 **4 active projects** (1 live, 3 in development)
+- 🎙️ **NEW:** Building voice agents with Cartesia + Cerebras
 
 ---
 
 ## 🔥 Production Tools
+
+### 🎙️ Voice Agent for SDR Work (Building Now)
+**Status:** 🔬 EXPLORING - Building with cutting-edge AI
+**Tech Stack:** Cartesia (ultra-realistic voice), Cerebras (ultra-fast inference), FastAPI, WebSockets, Claude
+**Goal:** 10x SDR productivity with < 100ms latency
+**Why I'm Building It:** "Making 50+ calls daily taught me exactly what AI should automate. Building the 10x agent I wish existed."
+
+**What I'm Learning:**
+- Real-time conversational AI at scale
+- Ultra-low latency voice synthesis (Cartesia)
+- High-speed LLM inference (Cerebras)
+- WebSocket architectures for voice streaming
+- Production voice agent deployment
+
+---
 
 ### [Dealer Scraper MVP](./projects/dealer-scraper-mvp)
 **Status:** ✅ LIVE - Processing real data
@@ -56,7 +72,7 @@ October 2025: Foundation Month ████████░░ 80%
 - ✅ 90 days shipping production code
 - 🔄 Building MCP servers for GTM workflows
 - 🔄 Exploring LangChain/LangGraph agents
-- 📅 Next: Voice AI integration (Vapi, Retel)
+- 🎙️ **NOW:** Building voice agents with Cartesia + Cerebras (10x SDR productivity)
 
 ---
 
@@ -177,18 +193,22 @@ See `docs/HOW_TO_ADD_PROJECTS.md` for instructions on adding new projects to the
 ## 🎯 Current Focus
 
 **Building:**
+- 🎙️ **Voice agent for SDR work** (Cartesia + Cerebras + Claude)
 - 🔧 MCP servers for GTM workflows
 - 🤖 AI agent experiments (LangChain/LangGraph)
 - 📊 Data enrichment pipelines
 
 **Learning:**
+- 📚 Real-time voice AI architectures
+- 📚 Ultra-low latency inference optimization
 - 📚 Jobs to be Done framework
 - 📚 Advanced React patterns
-- 📚 Voice AI (Vapi, Retel)
 
 **Following:**
+- 👀 **Cartesia** (ultra-realistic voice synthesis)
+- 👀 **Cerebras** (fastest LLM inference hardware)
 - 👀 Anthropic, LangChain, Cohere
-- 👀 Vapi, Retel, Exa
+- 👀 Exa (AI-powered search)
 - 👀 AI GTM infrastructure space
 
 ---

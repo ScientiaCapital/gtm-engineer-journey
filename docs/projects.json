@@ -1,6 +1,27 @@
 {
   "projects": [
     {
+      "id": "voice-agent-sdr",
+      "name": "Voice Agent for SDR Work",
+      "emoji": "🎙️",
+      "status": "exploring",
+      "statusLabel": "🔬 BUILDING NOW",
+      "description": "Making 50+ calls daily taught me what AI should automate. Building the 10x agent I wish existed.",
+      "whatILearned": "Cartesia ultra-realistic voice, Cerebras inference speed, real-time conversation AI",
+      "metrics": [
+        {
+          "value": "10x",
+          "label": "SDR productivity goal"
+        },
+        {
+          "value": "< 100ms",
+          "label": "target latency"
+        }
+      ],
+      "techStack": ["Cartesia", "Cerebras", "FastAPI", "WebSockets", "Anthropic Claude"],
+      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+    },
+    {
       "id": "dealer-scraper-mvp",
       "name": "Dealer Scraper MVP",
       "emoji": "🚀",
