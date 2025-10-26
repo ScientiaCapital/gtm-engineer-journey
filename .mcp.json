@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+      "config": {
+        "directories": ["/Users/tmkipper/Desktop/tk_projects/gtm-engineer-journey/"]
+      }
+    }
+  }
+}

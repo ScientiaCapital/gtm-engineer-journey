@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Scraper MVP - Live Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="mb-8">
+            <a href="./index.html" class="text-purple-600 hover:text-purple-800">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex justify-between items-start mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Dealer Scraper MVP</h1>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full">PRODUCTION</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Overview</h2>
+                    <p class="text-gray-600 mb-4">
+                        Production-ready web scraping tool designed for extracting OEM dealer and installer data. 
+                        Currently processing Tesla installer networks with plans to expand to other manufacturers.
+                    </p>
+
+                    <h3 class="font-bold mb-2">Features:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
+                        <li>Automated dealer/installer discovery</li>
+                        <li>Real-time data extraction</li>
+                        <li>CSV export with standardized formatting</li>
+                        <li>Rate limiting and error handling</li>
+                        <li>Duplicate detection</li>
+                        <li>Progress tracking and logging</li>
+                    </ul>
+
+                    <h3 class="font-bold mb-2">Tech Stack:</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Python 3.9+</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">BeautifulSoup4</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Requests</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Pandas</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">CSV Export</span>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ScientiaCapital/dealer-scraper-mvp" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">
+                            <i class="fab fa-github mr-2"></i>View Code
+                        </a>
+                        <a href="#" class="border border-purple-600 text-purple-600 px-6 py-2 rounded hover:bg-purple-50">
+                            <i class="fas fa-book mr-2"></i>API Docs
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Live Stats</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-500 text-sm">Total Dealers Scraped</p>
+                                <p class="text-2xl font-bold text-purple-600">1,247</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Active OEMs</p>
+                                <p class="text-2xl font-bold text-purple-600">1</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Data Points</p>
+                                <p class="text-2xl font-bold text-purple-600">14,964</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Success Rate</p>
+                                <p class="text-2xl font-bold text-purple-600">99.2%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold mt-6 mb-2">Sample Output:</h3>
+                    <div class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre>{
+  "dealer_name": "Tesla Certified Installer",
+  "location": "San Francisco, CA",
+  "contact": "+1-555-0123",
+  "email": "installer@example.com",
+  "services": ["Installation", "Maintenance"],
+  "rating": 4.8,
+  "scraped_at": "2025-10-26T12:00:00Z"
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <h2 class="text-xl font-bold mb-4">Use Cases</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-chart-line text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Market Analysis</h3>
+                        <p class="text-sm text-gray-600">Identify dealer density and coverage gaps</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-users text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Lead Generation</h3>
+                        <p class="text-sm text-gray-600">Build qualified installer contact lists</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-map-marked-alt text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Territory Planning</h3>
+                        <p class="text-sm text-gray-600">Optimize sales territory assignments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
