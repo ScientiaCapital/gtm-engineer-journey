@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Kipper - 25+ years GTM experience, now building AI-powered tools. Documenting the journey from boardroom to codebase.">
+    <meta property="og:title" content="GTM Engineer Learning Journey - Timothy Kipper">
+    <meta property="og:description" content="From boardroom to codebase: 25+ years in GTM, now shipping production code and building AI tools">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scientiacapital.github.io/gtm-engineer-journey/">
+    <title>GTM Engineer Journey - Timothy Kipper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-black: #0a0e27;
+            --electric-blue: #00d9ff;
+            --gold: #ffa500;
+            --green: #00ff88;
+            --white: #ffffff;
+            --light-gray: #e0e0e0;
+            --dark-gray: #1a1e3a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--navy-black);
+            color: var(--light-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        h1, h2, h3 {
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            margin-bottom: 1rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--electric-blue), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-blue { color: var(--electric-blue); }
+        .accent-gold { color: var(--gold); }
+        .accent-green { color: var(--green); }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            background: linear-gradient(180deg, var(--navy-black) 0%, var(--dark-gray) 100%);
+        }
+
+        #hero .subheadline {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            margin-bottom: 2rem;
+            color: var(--light-gray);
+        }
+
+        .day-counter {
+            display: inline-block;
+            background: rgba(0, 217, 255, 0.1);
+            border: 2px solid var(--electric-blue);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-family: 'Courier New', monospace;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--electric-blue);
+            margin: 2rem 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid var(--gold);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+
+        .scroll-indicator {
+            margin-top: 3rem;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            color: var(--electric-blue);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .timeline-year {
+            min-width: 120px;
+            font-weight: 700;
+            color: var(--electric-blue);
+            font-size: 1.2rem;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--electric-blue);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--electric-blue);
+            font-family: 'Courier New', monospace;
+        }
+
+        .stat-label {
+            color: var(--light-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 255, 136, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--electric-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--electric-blue), var(--green));
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .status-live {
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--green);
+            border: 1px solid var(--green);
+        }
+
+        .status-progress {
+            background: rgba(255, 165, 0, 0.2);
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .project-metric {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin: 1rem 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--light-gray);
+        }
+
+        /* Tech Columns */
+        .tech-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .tech-column {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-column h3 {
+            color: var(--electric-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .check { color: var(--green); font-size: 1.2rem; }
+        .learning { color: var(--gold); font-size: 1.2rem; }
+
+        /* Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-card.highlight {
+            border-color: var(--electric-blue);
+            background: rgba(0, 217, 255, 0.05);
+        }
+
+        .comparison-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Books List */
+        .books-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .book-item {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid var(--gold);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Callout Box */
+        .callout {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(0, 255, 136, 0.1));
+            border-left: 4px solid var(--electric-blue);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 4rem 0 2rem;
+            border-top: 2px solid var(--electric-blue);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--electric-blue);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-link:hover {
+            color: var(--electric-blue);
+        }
+
+        .goals-list {
+            list-style: none;
+        }
+
+        .goals-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .goals-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .goals-list li.completed::before {
+            background: var(--green);
+        }
+
+        .goals-list li.in-progress::before {
+            background: var(--gold);
+        }
+
+        .goals-list li.upcoming::before {
+            background: var(--electric-blue);
+        }
+
+        .quote {
+            text-align: center;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--electric-blue);
+            margin: 3rem 0 2rem;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--light-gray);
+            opacity: 0.7;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--electric-blue), var(--green));
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                min-height: auto;
+                padding: 60px 0;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-year {
+                min-width: auto;
+            }
+
+            .tech-columns,
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Hero -->
+    <section id="hero">
+        <div class="container">
+            <h1>From Boardroom to Codebase:<br><span class="gradient-text">Documenting My Journey Building GTM Tools</span></h1>
+            <p class="subheadline">25+ years in sales & business development. 5 years exploring AI/ML. 90 days shipping production code. Following curiosity wherever it leads.</p>
+
+            <div class="day-counter">
+                <span id="dayCount">90</span> DAYS OF LEARNING TO BUILD
+            </div>
+
+            <div class="badge">🚀 Building in Public</div>
+
+            <div class="scroll-indicator">↓</div>
+        </div>
+    </section>
+
+    <!-- Section 2: Why I'm Building -->
+    <section id="why">
+        <div class="container">
+            <h2 class="accent-gold">The 25-Year Itch</h2>
+
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">
+                After implementing Five9 call centers three times, Service Titan three times, and countless CRMs... after getting certified in Generac, Enphase, SimpliPhi, and Mitsubishi systems... after holding Series 7 & 63 licenses and raising angel capital... I had a realization:
+            </p>
+
+            <div class="callout">
+                <strong>I was always on the buying side of GTM tools. What if I could build them?</strong>
+            </div>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-year">2000s</div>
+                    <div class="timeline-content">
+                        <strong>Serial Entrepreneur</strong> - Bio/Nanotech ventures, raising angel capital, learning business models
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010s</div>
+                    <div class="timeline-content">
+                        <strong>Director Roles</strong> - Building call centers, leading GTM teams, implementing enterprise systems
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <strong>The Spark</strong> - Berkeley Fintech Python Bootcamp
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020-2024</div>
+                    <div class="timeline-content">
+                        <strong>Deep Dive</strong> - Following ML, AI, Crypto, Blockchain, LLMs
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <strong>Started Building</strong> - Docker → FastAPI → Production Tools
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Enterprise Implementations<br>(Five9 3x, Service Titan 3x)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Technical Certifications<br>(Generac, Enphase, SimpliPhi, Mitsubishi, Series 7/63)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Formative Books<br>(Business Model Gen → Never Split the Difference)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number accent-green">NOW</div>
+                    <div class="stat-label">Sr. BDR @ Coperniq<br>Still Learning Daily</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: What I'm Building -->
+    <section id="building">
+        <div class="container">
+            <h2 class="accent-blue">Learning By Doing: Production Tools & Experiments</h2>
+
+            <div class="project-grid fade-in">
+                <div class="project-card">
+                    <span class="status-badge status-live">✅ LIVE & PROCESSING</span>
+                    <h3>🚀 Dealer Scraper MVP</h3>
+                    <div class="project-metric">1,247 dealers<br><span style="font-size: 1.5rem;">99.2% success rate</span></div>
+                    <p><strong>What I Learned:</strong> Python, BeautifulSoup, Pandas, data cleaning at scale</p>
+                    <p style="margin-top: 1rem;"><em>"When I was selling solar, I needed this tool. So I built it."</em></p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">BeautifulSoup</span>
+                        <span class="tech-badge">Pandas</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <a href="dealer-scraper-demo.html" style="color: var(--electric-blue); text-decoration: none; margin-top: 1rem; display: inline-block;">View Demo →</a>
+                </div>
+
+                <div class="project-card">
+                    <span class="status-badge status-progress">🔄 90 DAYS IN</span>
+                    <h3>🏗️ GTM Learning Journey</h3>
+                    <div class="project-metric">Foundation Month<br><span style="font-size: 1.5rem;">80% Complete</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                    <p><strong>What I'm Learning:</strong> Docker, FastAPI, PostgreSQL, React, Next.js</p>
+                    <p style="margin-top: 1rem;"><em>"Understanding the full stack makes me better at selling these tools"</em></p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="status-badge status-progress">🧪 EXPLORING</span>
+                    <h3>🤖 AI Infrastructure</h3>
+                    <div class="project-metric">MCP Servers<br><span style="font-size: 1.5rem;">Agent Systems</span></div>
+                    <p><strong>Current Focus:</strong> MCP Servers, Claude Skills, LangChain agents</p>
+                    <p style="margin-top: 1rem;"><em>"Build GTM tools powered by AI that I'd actually want to use"</em></p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Anthropic Claude</span>
+                        <span class="tech-badge">MCP</span>
+                        <span class="tech-badge">HuggingFace</span>
+                        <span class="tech-badge">LLM Fine-Tuning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout fade-in">
+                Not just tutorials. Not just toy projects. <strong class="accent-blue">Shipping real tools that solve problems I've experienced in 25 years of GTM work.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Technologies -->
+    <section id="tech">
+        <div class="container">
+            <h2 class="accent-green">My Current Learning Stack</h2>
+
+            <div class="tech-columns fade-in">
+                <div class="tech-column">
+                    <h3>Infrastructure (Learned)</h3>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Docker & Docker Compose</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>FastAPI & Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>PostgreSQL & Redis</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Git & GitHub</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="learning">📚</span>
+                        <span>Kubernetes, Microservices</span>
+                    </div>
+                </div>
+
+                <div class="tech-column">
+                    <h3>AI/ML (Exploring)</h3>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Anthropic Claude (Desktop, Code, MCP)</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Cursor IDE & AI Assistants</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>HuggingFace & Model Fine-Tuning</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Chinese LLMs (DeepSeek, Qwen)</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="learning">📚</span>
+                        <span>LangChain, Vector DBs</span>
+                    </div>
+                </div>
+
+                <div class="tech-column">
+                    <h3>Frontend (In Progress)</h3>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>React & Next.js Basics</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="check">✓</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="learning">📚</span>
+                        <span>TypeScript, Advanced Patterns</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="learning">📚</span>
+                        <span>Real-time UIs, WebSockets</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout fade-in">
+                <strong>The Approach:</strong> Berkeley Fintech Bootcamp taught me Python fundamentals. The last 5 years taught me to follow emerging tech (ML, AI, Crypto, Blockchain). The last 90 days taught me to ship production code.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: The Unusual Background -->
+    <section id="background">
+        <div class="container">
+            <h2 class="accent-gold">The Unusual Background</h2>
+
+            <div class="comparison-grid fade-in">
+                <div class="comparison-card">
+                    <h3>Most Engineers Have</h3>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Deep technical skills</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Strong CS foundation</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Can build anything</span>
+                    </div>
+                    <div class="comparison-item" style="opacity: 0.5;">
+                        <span>✗</span>
+                        <span>Don't understand GTM workflows</span>
+                    </div>
+                    <div class="comparison-item" style="opacity: 0.5;">
+                        <span>✗</span>
+                        <span>Haven't sold to enterprises</span>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>Most GTM Leaders Have</h3>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Deep customer empathy</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Sales & business experience</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Know what customers need</span>
+                    </div>
+                    <div class="comparison-item" style="opacity: 0.5;">
+                        <span>✗</span>
+                        <span>Can't read the codebase</span>
+                    </div>
+                    <div class="comparison-item" style="opacity: 0.5;">
+                        <span>✗</span>
+                        <span>Don't understand architecture</span>
+                    </div>
+                </div>
+
+                <div class="comparison-card highlight">
+                    <h3 class="accent-blue">What I'm Exploring</h3>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>25 years GTM pain points</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>6 enterprise implementations</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Technical certifications (7+)</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Now learning to build solutions</span>
+                    </div>
+                    <div class="comparison-item">
+                        <span class="check">✓</span>
+                        <span>Understanding both sides</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout fade-in">
+                <strong class="accent-blue">The Insight:</strong> "I've been the customer for every GTM tool. I know where they fail because I've lived it. Now I'm learning why they fail by building them myself."
+            </div>
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1rem;">Books That Shaped My Thinking</h3>
+            <div class="books-list fade-in">
+                <span class="book-item">Business Model Generation</span>
+                <span class="book-item">Crossing the Chasm</span>
+                <span class="book-item">Blue Ocean Strategy</span>
+                <span class="book-item">Challenger Sale</span>
+                <span class="book-item">Never Split the Difference</span>
+                <span class="book-item">Jobs to be Done</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Learning Philosophy -->
+    <section id="philosophy">
+        <div class="container">
+            <h2 class="accent-green">How I Learn: Fail Fast, Build in Public</h2>
+
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-year">Stage 1</div>
+                    <div class="timeline-content">
+                        <strong>Founder → C-Level (2000s-2010s)</strong><br>
+                        Raised angel capital, built teams, learned business models<br>
+                        <em class="accent-blue">Key Learning: How businesses actually work</em>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Stage 2</div>
+                    <div class="timeline-content">
+                        <strong>Reset to IC (2018-2020)</strong><br>
+                        Started over in HVAC/Solar (lead gen → in-home sales)<br>
+                        <em class="accent-blue">Key Learning: Humility. What actually works in the field.</em>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Stage 3</div>
+                    <div class="timeline-content">
+                        <strong>First GTM Hire (2023-Present)</strong><br>
+                        Coperniq Sr. BDR (0→1, supporting founders)<br>
+                        <em class="accent-blue">Key Learning: Startup velocity. Wearing multiple hats.</em>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Stage 4</div>
+                    <div class="timeline-content">
+                        <strong>Learning to Code (2024)</strong><br>
+                        Bootcamp → Self-study → Production tools<br>
+                        <em class="accent-blue">Key Learning: The gap between theory and shipping.</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout fade-in">
+                "I've never been afraid to start from the bottom to learn something new. <strong>Father. Founder. C-Level. Lead Generator. Now: Builder.</strong> Each stage taught me something essential."
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Current Focus -->
+    <section id="current">
+        <div class="container">
+            <h2 class="accent-blue">What Keeps Me Up at Night (In a Good Way)</h2>
+
+            <div class="project-grid fade-in">
+                <div class="project-card">
+                    <h3>🔧 MCP Server Development</h3>
+                    <p><strong>Building:</strong> Custom MCP servers for GTM workflows</p>
+                    <p><strong>Learning:</strong> Claude protocol, server architecture</p>
+                    <p><strong>Goal:</strong> Tools that actually help BDRs/AEs</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>🤖 AI Agent Experiments</h3>
+                    <p><strong>Exploring:</strong> LangChain/LangGraph orchestration</p>
+                    <p><strong>Testing:</strong> Multi-agent systems for sales research</p>
+                    <p><strong>Why:</strong> "Imagine if AI could do the lead research I do manually"</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>📊 GTM Tool Prototypes</h3>
+                    <p><strong>Building:</strong> Scraping tools, data enrichment pipelines</p>
+                    <p><strong>Tech Stack:</strong> Python, FastAPI, Docker</p>
+                    <p><strong>Motivation:</strong> "The tools I wish existed when I was calling 50+ leads/day"</p>
+                </div>
+            </div>
+
+            <div class="callout fade-in">
+                <strong>📚 Currently Reading:</strong> Jobs to be Done (understanding what customers really want)<br>
+                <strong>Following:</strong> Anthropic, LangChain, Cohere, Vapi, Retel, Exa<br>
+                <strong>Why These:</strong> "They're building the infrastructure for AI-powered GTM"
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: The Bigger Picture -->
+    <section id="vision">
+        <div class="container">
+            <h2 class="accent-gold">Where This Journey Leads</h2>
+
+            <div class="callout fade-in" style="font-size: 1.3rem; line-height: 1.9;">
+                I believe the next generation of GTM tools will be AI-native. Not chatbots bolted onto CRMs. Not automation that breaks. But genuinely intelligent systems that understand context, learn from interactions, and actually help salespeople sell better.
+                <br><br>
+                <strong class="accent-blue">I've spent 25 years using GTM tools. 5 years following AI/ML. 90 days building production systems.</strong>
+                <br><br>
+                This journey is about understanding both sides deeply enough to build something that doesn't suck.
+            </div>
+
+            <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">What Success Looks Like</h3>
+            <div class="stats-grid fade-in">
+                <div class="stat-card">
+                    <div class="stat-number accent-green">✓</div>
+                    <div class="stat-label">Ship production tools that people actually use</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number accent-green">✓</div>
+                    <div class="stat-label">Contribute to the AI GTM infrastructure space</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number accent-green">✓</div>
+                    <div class="stat-label">Keep learning in public</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number accent-green">✓</div>
+                    <div class="stat-label">Bridge the gap between sales leaders and engineers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content fade-in">
+                <div class="footer-section">
+                    <h3>📍 Current Status</h3>
+                    <p><strong class="accent-blue">Day <span id="footerDayCount">90</span> of learning to build</strong></p>
+                    <p>Sr. BDR @ Coperniq (Still crushing quota)</p>
+                    <p>Building nights & weekends</p>
+                    <p>Documenting everything</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>🔗 Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/ScientiaCapital/gtm-engineer-journey" target="_blank" class="social-link">
+                            <span>GitHub</span> <span class="accent-blue">→</span>
+                        </a>
+                        <a href="https://linkedin.com/in/revenue-builder" target="_blank" class="social-link">
+                            <span>LinkedIn</span> <span class="accent-blue">→</span>
+                        </a>
+                        <a href="mailto:tkipper@gmail.com" class="social-link">
+                            <span>Email</span> <span class="accent-blue">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>📊 Learning Goals</h3>
+                    <ul class="goals-list">
+                        <li class="completed">Month 1: Docker, FastAPI, PostgreSQL</li>
+                        <li class="in-progress">Month 2: React, Next.js, Production Patterns</li>
+                        <li class="upcoming">Month 3: LangChain, MCP Servers, Agents</li>
+                        <li class="upcoming">Month 4: Voice AI, Real-time Systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="quote fade-in">
+                "The best time to start learning was 25 years ago. The second best time is now. Day 90 and counting."
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Timothy Kipper Jr. | Building in Public | GTM Engineer Journey</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animated counter for day count
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Initialize counters
+        window.addEventListener('load', () => {
+            const dayCounter = document.getElementById('dayCount');
+            const footerDayCounter = document.getElementById('footerDayCount');
+
+            animateCounter(dayCounter, 90);
+            animateCounter(footerDayCounter, 90);
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
