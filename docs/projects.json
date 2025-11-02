@@ -1,25 +1,29 @@
 {
   "projects": [
     {
-      "id": "voice-agent-sdr",
-      "name": "Voice Agent for SDR Work",
+      "id": "sales-agent",
+      "name": "Sales Agent",
       "emoji": "🎙️",
       "status": "exploring",
-      "statusLabel": "🔬 BUILDING NOW",
-      "description": "Making 50+ calls daily taught me what AI should automate. Building the 10x agent I wish existed.",
-      "whatILearned": "Cartesia ultra-realistic voice, Cerebras inference speed, real-time conversation AI",
+      "statusLabel": "🔬 PHASE 6 - PIPELINE TESTING",
+      "description": "Enterprise AI sales automation with 6 specialized agents. Processes leads in ~12 seconds vs. 2-4 hours manually.",
+      "whatILearned": "LangGraph orchestration, FastAPI production patterns, Close CRM integration, multi-agent coordination, ultra-low latency AI ($0.000006/lead)",
       "metrics": [
         {
-          "value": "10x",
-          "label": "SDR productivity goal"
+          "value": "~12s",
+          "label": "end-to-end pipeline"
         },
         {
-          "value": "< 100ms",
-          "label": "target latency"
+          "value": "$0.000006",
+          "label": "per qualification"
+        },
+        {
+          "value": "96%",
+          "label": "test coverage"
         }
       ],
-      "techStack": ["Cartesia", "Cerebras", "FastAPI", "WebSockets", "Anthropic Claude"],
-      "demoLink": "",
+      "techStack": ["FastAPI", "LangGraph", "PostgreSQL", "Redis", "Cerebras", "Claude", "Close CRM"],
+      "demoLink": "projects/sales-agent.html",
       "githubLink": "https://github.com/ScientiaCapital/sales-agent"
     },
     {
@@ -29,63 +33,102 @@
       "status": "live",
       "statusLabel": "✅ LIVE & PROCESSING",
       "description": "When I was selling solar, I needed this tool. So I built it.",
-      "whatILearned": "Python, BeautifulSoup, Pandas, data cleaning at scale",
+      "whatILearned": "Multi-OEM scraping, ICP scoring algorithms, data normalization, Streamlit dashboards, checkpoint-based ETL",
       "metrics": [
         {
-          "value": "1,247",
-          "label": "dealers scraped"
+          "value": "8,277",
+          "label": "contractors scraped"
         },
         {
-          "value": "99.2%",
-          "label": "success rate"
+          "value": "97.3%",
+          "label": "deduplication accuracy"
+        },
+        {
+          "value": "198",
+          "label": "multi-OEM prospects"
         }
       ],
-      "techStack": ["Python", "BeautifulSoup", "Pandas", "Docker"],
-      "demoLink": "dealer-scraper-demo.html",
-      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey/tree/main/projects/dealer-scraper-mvp"
+      "techStack": ["Python", "BeautifulSoup", "Pandas", "Streamlit", "Playwright"],
+      "demoLink": "projects/dealer-scraper.html",
+      "githubLink": "https://github.com/ScientiaCapital/dealer-scraper-mvp"
     },
     {
-      "id": "gtm-learning-journey",
-      "name": "GTM Learning Journey",
-      "emoji": "🏗️",
-      "status": "in-progress",
-      "statusLabel": "🔄 90 DAYS IN",
-      "description": "Understanding the full stack makes me better at selling these tools",
-      "whatILearned": "Docker, FastAPI, PostgreSQL, React, Next.js",
+      "id": "swaggy-stacks",
+      "name": "Swaggy Stacks",
+      "emoji": "💰",
+      "status": "live",
+      "statusLabel": "✅ PRODUCTION-READY",
+      "description": "Institutional-grade algorithmic trading platform. Paper trading with 11 options strategies + full observability.",
+      "whatILearned": "Next.js 14, 6 Grafana dashboards, 50+ Prometheus metrics, multi-agent AI coordination, options Greeks, institutional monitoring",
       "metrics": [
         {
-          "value": "Foundation Month",
-          "label": ""
+          "value": "359",
+          "label": "Python modules"
         },
         {
-          "value": "80%",
-          "label": "Complete"
+          "value": "11",
+          "label": "options strategies"
+        },
+        {
+          "value": "6",
+          "label": "Grafana dashboards"
         }
       ],
-      "progress": 80,
-      "techStack": ["Docker", "FastAPI", "PostgreSQL", "React", "Next.js"],
-      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+      "techStack": ["FastAPI", "Next.js 14", "PostgreSQL", "Grafana", "Prometheus", "Alpaca API"],
+      "demoLink": "projects/swaggy-stacks.html",
+      "githubLink": "https://github.com/ScientiaCapital/swaggy-stacks"
     },
     {
-      "id": "ai-infrastructure",
-      "name": "AI Infrastructure",
+      "id": "ai-cost-optimizer",
+      "name": "AI Cost Optimizer",
       "emoji": "🤖",
-      "status": "exploring",
-      "statusLabel": "🧪 EXPLORING",
-      "description": "Build GTM tools powered by AI that I'd actually want to use",
-      "whatILearned": "MCP Servers, Claude Skills, LangChain agents",
+      "status": "live",
+      "statusLabel": "✅ MCP MARKETPLACE READY",
+      "description": "Intelligent LLM routing saves 40-70% on AI costs. Routes across 40+ models from 8 providers.",
+      "whatILearned": "Model Context Protocol (MCP), cost optimization algorithms, complexity scoring, multi-provider routing, Claude Desktop integration",
       "metrics": [
         {
-          "value": "MCP Servers",
-          "label": ""
+          "value": "40-70%",
+          "label": "cost savings"
         },
         {
-          "value": "Agent Systems",
-          "label": ""
+          "value": "40+",
+          "label": "models supported"
+        },
+        {
+          "value": "8",
+          "label": "providers"
         }
       ],
-      "techStack": ["Anthropic Claude", "MCP", "HuggingFace", "LLM Fine-Tuning"],
-      "githubLink": "https://github.com/ScientiaCapital/gtm-engineer-journey"
+      "techStack": ["FastAPI", "MCP", "SQLite", "Anthropic", "Google", "Cerebras", "DeepSeek"],
+      "demoLink": "projects/ai-cost-optimizer.html",
+      "githubLink": "https://github.com/ScientiaCapital/ai-cost-optimizer"
+    },
+    {
+      "id": "thetaroom",
+      "name": "ThetaRoom",
+      "emoji": "🎯",
+      "status": "live",
+      "statusLabel": "✅ DEPLOYMENT READY",
+      "description": "GPU-accelerated autonomous AI trading. 24/7 operations with GraphRAG reasoning and 6 specialized agents.",
+      "whatILearned": "FlashAttention-3, GraphRAG multi-hop reasoning, Next.js 15, Neon TimescaleDB, autonomous trading systems, <$250/month GPU deployment",
+      "metrics": [
+        {
+          "value": "352",
+          "label": "Python files"
+        },
+        {
+          "value": "<$250",
+          "label": "monthly cost"
+        },
+        {
+          "value": "24/7",
+          "label": "autonomous ops"
+        }
+      ],
+      "techStack": ["FastAPI", "Next.js 15", "FlashAttention-3", "GraphRAG", "Neon", "Alpaca API"],
+      "demoLink": "projects/thetaroom.html",
+      "githubLink": "https://github.com/ScientiaCapital/ThetaRoom"
     }
   ]
 }

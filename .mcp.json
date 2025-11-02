@@ -1,15 +1,12 @@
 {
   "mcpServers": {
-    "memory": {
+    "context7": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
+      "args": ["-y", "@upstash/context7-mcp@latest"]
     },
-    "filesystem": {
+    "sequential-thinking": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
-      "config": {
-        "directories": ["/Users/tmkipper/Desktop/tk_projects/gtm-engineer-journey/"]
-      }
+      "args": ["-y", "mcp-server-sequential-thinking"]
     }
   }
 }

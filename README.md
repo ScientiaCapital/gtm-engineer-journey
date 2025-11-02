@@ -20,40 +20,44 @@ This repository documents my learning journey from executive to engineer - build
 - 📅 **Day 90** of learning to build
 - 💼 **Sr. BDR @ Coperniq** (still crushing quota)
 - 🏗️ **Building nights & weekends**
-- 📊 **4 active projects** (1 live, 3 in development)
-- 🎙️ **NEW:** Building voice agents with Cartesia + Cerebras
+- 📊 **5 production-ready projects** (all solving real GTM problems)
+- 🎙️ **NEW:** Enterprise AI sales automation + algorithmic trading platforms
 
 ---
 
-## 🔥 Production Tools
+## 🔥 The 5 Production Projects
 
-### 🎙️ [Voice Agent for SDR Work](https://github.com/ScientiaCapital/sales-agent) (Building Now)
-**Status:** 🔬 BUILDING NOW - Dedicated repository with active development
-**Tech Stack:** Cartesia (ultra-realistic voice), Cerebras (ultra-fast inference), FastAPI, WebSockets, Claude
-**Goal:** 10x SDR productivity with < 100ms latency
-**Repository:** [github.com/ScientiaCapital/sales-agent](https://github.com/ScientiaCapital/sales-agent)
-**Why I'm Building It:** "Making 50+ calls daily taught me exactly what AI should automate. Building the 10x agent I wish existed."
+All projects solve **real GTM problems** with AI-native approaches. Full code in separate repositories.
 
-**What I'm Learning:**
-- Real-time conversational AI at scale
-- Ultra-low latency voice synthesis (Cartesia)
-- High-speed LLM inference (Cerebras)
-- WebSocket architectures for voice streaming
-- Production voice agent deployment
+### 🎙️ [Sales Agent](https://github.com/ScientiaCapital/sales-agent)
+**Enterprise AI sales automation** - 6 specialized LangGraph agents process leads in ~12s vs. 2-4 hours manually
+**Stack:** FastAPI, LangGraph, PostgreSQL, Redis, Cerebras, Claude, Close CRM
+**Status:** Phase 6 - Pipeline Testing | **Metrics:** $0.000006/lead, 96% test coverage
+[View Demo →](https://scientiacapital.github.io/gtm-engineer-journey/projects/sales-agent.html)
 
----
+### 🚀 [Dealer Scraper MVP](https://github.com/ScientiaCapital/dealer-scraper-mvp)
+**Multi-OEM contractor intelligence** with ICP scoring - "When I was selling solar, I needed this exact tool. So I built it."
+**Stack:** Python, BeautifulSoup, Pandas, Streamlit, Playwright
+**Status:** Live & Processing | **Metrics:** 8,277 contractors, 97.3% dedup, 198 multi-OEM prospects
+[View Demo →](https://scientiacapital.github.io/gtm-engineer-journey/projects/dealer-scraper.html)
 
-### [Dealer Scraper MVP](./projects/dealer-scraper-mvp)
-**Status:** ✅ LIVE - Processing real data
-**Tech Stack:** Python, BeautifulSoup, Pandas, Docker
-**Results:** 1,247+ dealers scraped, 99.2% success rate
-**Why I Built It:** "When I was selling solar, I needed this exact tool. So I built it."
+### 💰 [Swaggy Stacks](https://github.com/ScientiaCapital/swaggy-stacks)
+**Institutional-grade algorithmic trading** - Paper trading with 11 options strategies + full observability
+**Stack:** FastAPI, Next.js 14, PostgreSQL, Grafana, Prometheus, Alpaca API
+**Status:** Production-Ready | **Metrics:** 359 Python modules, 6 Grafana dashboards
+[View Demo →](https://scientiacapital.github.io/gtm-engineer-journey/projects/swaggy-stacks.html)
 
-**What I Learned:**
-- Web scraping at scale
-- Data cleaning and normalization
-- Production-ready error handling
-- Docker containerization
+### 🤖 [AI Cost Optimizer](https://github.com/ScientiaCapital/ai-cost-optimizer)
+**Intelligent LLM routing** saves 40-70% on AI costs - Routes across 40+ models from 8 providers
+**Stack:** FastAPI, MCP, SQLite, multi-provider (Anthropic, Google, Cerebras, DeepSeek)
+**Status:** MCP Marketplace Ready | **Metrics:** Real-time cost tracking, budget enforcement
+[View Demo →](https://scientiacapital.github.io/gtm-engineer-journey/projects/ai-cost-optimizer.html)
+
+### 🎯 [ThetaRoom](https://github.com/ScientiaCapital/ThetaRoom)
+**GPU-accelerated autonomous AI trading** - 24/7 operations with GraphRAG reasoning and 6 specialized agents
+**Stack:** FastAPI, Next.js 15, FlashAttention-3, GraphRAG, Neon, Alpaca API
+**Status:** Deployment Ready | **Metrics:** 352 Python files, <$250/month, 24/7 autonomous ops
+[View Demo →](https://scientiacapital.github.io/gtm-engineer-journey/projects/thetaroom.html)
 
 ---
 
@@ -71,9 +75,10 @@ October 2025: Foundation Month ████████░░ 80%
 - ✅ Berkeley Fintech Python Bootcamp (2021)
 - ✅ 4 years following AI/ML/Crypto/Blockchain
 - ✅ 90 days shipping production code
-- 🔄 Building MCP servers for GTM workflows
-- 🔄 Exploring LangChain/LangGraph agents
-- 🎙️ **NOW:** Building voice agents with Cartesia + Cerebras (10x SDR productivity)
+- ✅ 5 production-ready projects (all solving real GTM problems)
+- ✅ Enterprise AI sales automation with LangGraph
+- ✅ Algorithmic trading platforms with institutional-grade monitoring
+- 🎙️ **NOW:** Scaling all 5 projects + documenting the journey
 
 ---
 
@@ -105,22 +110,41 @@ October 2025: Foundation Month ████████░░ 80%
 
 ## 📁 Repository Structure
 
-```
-gtm-engineer-journey/
-├── docs/
-│   ├── index.html                 # GitHub Pages portfolio
-│   ├── projects.json              # Dynamic project database
-│   ├── dealer-scraper-demo.html   # Live demo page
-│   └── HOW_TO_ADD_PROJECTS.md     # Adding new projects
-├── projects/
-│   └── dealer-scraper-mvp/        # Production scraping tool
-├── week01-docker-api/             # Week 1 learning project
-├── .env.example                   # Environment template (no secrets!)
-├── .gitignore                     # Security-first configuration
-├── LEARNING_PLAN.md               # 6-month learning roadmap
-└── README.md                      # You are here
+This is a **learning journal** - not a product repo. The actual projects live in separate repositories.
 
 ```
+gtm-engineer-journey/
+├── docs/                          # GitHub Pages (public portfolio showcase)
+│   ├── index.html                 # Main landing page
+│   ├── projects.json              # ALL 5 projects (updated!)
+│   └── projects/                  # Individual project demo pages
+│       ├── sales-agent.html
+│       ├── dealer-scraper.html
+│       ├── swaggy-stacks.html
+│       ├── ai-cost-optimizer.html
+│       └── thetaroom.html
+├── learning-logs/                 # Personal learning reflections
+│   └── 2025/
+│       ├── october/
+│       └── november/
+├── milestones/                    # Major achievements & breakthroughs
+├── resources/                     # Books, tools, courses
+├── templates/                     # Consistency helpers
+├── scripts/                       # Automation tools
+├── archive/                       # Historical projects
+│   ├── week01-docker-api/
+│   └── dealer-scraper-mvp/
+├── .claude/                       # AI assistant context
+├── LEARNING_PLAN.md               # 6-month roadmap
+└── README.md                      # You are here
+```
+
+**Note:** This repo showcases the journey. The actual project code lives at:
+- `/tk_projects/sales-agent`
+- `/tk_projects/dealer-scraper-mvp`
+- `/tk_projects/swaggy-stacks`
+- `/tk_projects/ai-cost-optimizer`
+- `/tk_projects/thetaroom`
 
 ---
 
@@ -168,7 +192,7 @@ Business Model Generation • Crossing the Chasm • Blue Ocean Strategy • Cha
 
 ## 🚀 Quick Start
 
-### View the Portfolio
+### View the Live Portfolio
 ```bash
 # Live site
 https://scientiacapital.github.io/gtm-engineer-journey/
@@ -177,39 +201,39 @@ https://scientiacapital.github.io/gtm-engineer-journey/
 open docs/index.html
 ```
 
-### Run the Dealer Scraper
-```bash
-cd projects/dealer-scraper-mvp
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python scraper.py
-```
+### Explore the Projects
+Each project has its own repository with full documentation:
+- **Sales Agent:** [github.com/ScientiaCapital/sales-agent](https://github.com/ScientiaCapital/sales-agent)
+- **Dealer Scraper:** [github.com/ScientiaCapital/dealer-scraper-mvp](https://github.com/ScientiaCapital/dealer-scraper-mvp)
+- **Swaggy Stacks:** [github.com/ScientiaCapital/swaggy-stacks](https://github.com/ScientiaCapital/swaggy-stacks)
+- **AI Cost Optimizer:** [github.com/ScientiaCapital/ai-cost-optimizer](https://github.com/ScientiaCapital/ai-cost-optimizer)
+- **ThetaRoom:** [github.com/ScientiaCapital/ThetaRoom](https://github.com/ScientiaCapital/ThetaRoom)
 
-### Add Your Own Projects
-See `docs/HOW_TO_ADD_PROJECTS.md` for instructions on adding new projects to the portfolio.
+### Add New Projects to Portfolio
+Use `/templates/project-entry.json` as a template and add to `docs/projects.json`.
 
 ---
 
 ## 🎯 Current Focus
 
-**Building:**
-- 🎙️ **Voice agent for SDR work** (Cartesia + Cerebras + Claude)
-- 🔧 MCP servers for GTM workflows
-- 🤖 AI agent experiments (LangChain/LangGraph)
-- 📊 Data enrichment pipelines
+**Scaling Projects:**
+- 🎙️ **Sales Agent** - Completing Phase 6 pipeline testing
+- 🚀 **Dealer Scraper** - Adding state license augmentation
+- 💰 **Swaggy Stacks** - Enhancing real-time monitoring
+- 🤖 **AI Cost Optimizer** - MCP marketplace distribution
+- 🎯 **ThetaRoom** - Production deployment preparation
 
-**Learning:**
-- 📚 Real-time voice AI architectures
-- 📚 Ultra-low latency inference optimization
-- 📚 Jobs to be Done framework
-- 📚 Advanced React patterns
+**Documenting Journey:**
+- 📚 Weekly learning logs (technical + personal growth)
+- 📊 Milestone documentation (Day 90, 120, 150...)
+- 🎓 Resource curation (books, tools, people to follow)
+- 🔄 Portfolio updates (keeping it fresh)
 
 **Following:**
 - 👀 **Cartesia** (ultra-realistic voice synthesis)
 - 👀 **Cerebras** (fastest LLM inference hardware)
-- 👀 Anthropic, LangChain, Cohere
-- 👀 Exa (AI-powered search)
+- 👀 **Anthropic, LangChain, Cohere** (AI infrastructure)
+- 👀 **Exa** (AI-powered search)
 - 👀 AI GTM infrastructure space
 
 ---

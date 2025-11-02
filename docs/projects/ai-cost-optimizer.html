@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cost Optimizer - Intelligent LLM Routing</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="mb-8">
+            <a href="../index.html" class="text-purple-600 hover:text-purple-800">
+                <i class="fas fa-arrow-left mr-2"></i>Back to Portfolio
+            </a>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex justify-between items-start mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">🤖 AI Cost Optimizer</h1>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full">MCP MARKETPLACE READY</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Overview</h2>
+                    <p class="text-gray-600 mb-4">
+                        Intelligent LLM routing system that automatically selects the most cost-efficient model for each task. Analyzes prompt complexity in real-time and routes across 40+ models from 8 providers, saving users 40-70% on AI API costs.
+                    </p>
+
+                    <h3 class="font-bold mb-2">Core Features:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 mb-6">
+                        <li>Smart routing via complexity scoring (0.0-1.0 scale)</li>
+                        <li>Real-time cost tracking with SQLite persistence</li>
+                        <li>Budget enforcement with configurable alerts</li>
+                        <li>Multi-provider support (Anthropic, Google, Cerebras, DeepSeek, etc.)</li>
+                        <li>Claude Desktop integration via MCP server</li>
+                        <li>Transparent pricing (see exact costs before/after)</li>
+                    </ul>
+
+                    <h3 class="font-bold mb-2">Tech Stack:</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">FastAPI</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">MCP Server</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">SQLite</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Anthropic</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Google</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">Cerebras</span>
+                        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded">DeepSeek</span>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ScientiaCapital/ai-cost-optimizer" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">
+                            <i class="fab fa-github mr-2"></i>View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Performance Metrics</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-500 text-sm">Cost Savings</p>
+                                <p class="text-2xl font-bold text-purple-600">40-70%</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Models Supported</p>
+                                <p class="text-2xl font-bold text-purple-600">40+</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">Providers</p>
+                                <p class="text-2xl font-bold text-purple-600">8</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm">MCP Tools</p>
+                                <p class="text-2xl font-bold text-purple-600">5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold mt-6 mb-2">Routing Strategy:</h3>
+                    <div class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm overflow-x-auto">
+                        <pre>Complexity Score → Model Selection:
+
+0.0-0.3: Free/cheap models
+         (Gemini Flash, Haiku)
+
+0.3-0.6: Mid-tier models
+         (GPT-3.5, Claude Haiku)
+
+0.6-1.0: Premium models
+         (GPT-4, Claude Opus)
+
+Learning-based pattern recognition</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t">
+                <h2 class="text-xl font-bold mb-4">Problem Solved</h2>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-exclamation-triangle text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Bill Shock</h3>
+                        <p class="text-sm text-gray-600">Unpredictable AI costs ($50 → $5,000+/month)</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-brain text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Manual Selection</h3>
+                        <p class="text-sm text-gray-600">Eliminate manual model selection overhead</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded">
+                        <i class="fas fa-chart-pie text-purple-600 text-2xl mb-2"></i>
+                        <h3 class="font-bold mb-1">Margin Multiplier</h3>
+                        <p class="text-sm text-gray-600">Make AI features profitable for SaaS companies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

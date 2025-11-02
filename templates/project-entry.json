@@ -1,0 +1,23 @@
+{
+  "id": "project-slug",
+  "name": "Project Name",
+  "emoji": "🚀",
+  "status": "live|in-progress|exploring",
+  "statusLabel": "✅ LIVE | 🔄 IN PROGRESS | 🔬 EXPLORING",
+  "description": "One-sentence pitch: What problem does this solve and why you built it?",
+  "whatILearned": "Key technical skills or insights gained (3-5 items, comma-separated)",
+  "metrics": [
+    {
+      "value": "1,247",
+      "label": "descriptive label"
+    },
+    {
+      "value": "99.2%",
+      "label": "another metric"
+    }
+  ],
+  "progress": 80,
+  "techStack": ["Python", "FastAPI", "PostgreSQL", "Docker"],
+  "demoLink": "projects/project-slug.html",
+  "githubLink": "https://github.com/ScientiaCapital/project-name"
+}

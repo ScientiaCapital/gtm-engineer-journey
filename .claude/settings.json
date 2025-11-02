@@ -1,0 +1,17 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-code": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/anthropics/claude-code.git"
+      }
+    }
+  },
+  "permissions": {
+    "deny": [
+      "NotebookEdit",
+      "WebSearch",
+      "WebFetch"
+    ]
+  }
+}
